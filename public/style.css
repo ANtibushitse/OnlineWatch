@@ -1,0 +1,62 @@
+/*general*/
+html{
+      background-image :url(https://unsplash.it/g/1500/1000); 
+      background-size: cover; 
+      font-family: 'Slabo 27px', serif; 
+}
+
+body{
+	font-size: 10rem;
+    display:flex;
+    flex:1;
+    min-height: 100vh;
+    align-items: center; 
+}
+/* cration du  cadrant et  style */
+.clock {
+      width: 30rem;
+      height: 30rem;
+      border:20px solid white;
+      border-radius:50%;
+      margin:50px auto;
+      position:relative; 
+      padding:7rem;
+      box-shadow:
+
+      0 0 0 4px rgba(0,0,0,0.1),
+      inset 0 0 0 2px #282c37, /* inset=  ombre interrieur */
+      inset 0 0 3px #9baec8,
+      0 0 4px #2b90d9 /**/
+}
+/*positionement du cadrant sur axe Y*/
+.time{
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform: translateY(-3px); /*positionne le cadrant sur l'axde Y */
+} 
+/*postionnement et mouvement de aiguilles */
+.hand {
+      width:50%;
+      height:6px;
+      background:white;
+      position: absolute;
+      top:50%;
+      transform-origin: 100%; /*Positionne  les aigullles au centre de l'orloge  */
+      transform : rotate(90deg); /*positionne les aiguilles à 90 deg (12h)*/
+      transition : all .1s; 
+      transition-timing-function:cubic-bezier(0.1, 2.7, 0.58, 1);/*imite le mouvement des aiguilles d'une montre */
+  }   
+  /* taille aiguille*/
+/*  .hand-sec{
+    
+
+  }
+  .hand-min{
+    
+  }
+  .hand-hour{
+    
+  }
+  */
+ 
